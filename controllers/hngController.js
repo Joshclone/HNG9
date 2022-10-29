@@ -38,23 +38,23 @@ exports.findAll = (req, res) => {
 
 //find a single user with (Id)
 exports.findOne = (req, res) => {
-    Hng9.findById(req.params.hngId)
+    Hng9.findById(req.params.Id)
         .then((data) => {
             if (!data) {
                 return res.status(404).send({
-                    message: "Hngi9 details not found with id " + req.params.hngId,
+                    message: "Hngi9 details not found with id " + req.params.Id,
                 });
             }
             res.send(data);
         }).catch((err) => {
             if (err.kind === "ObjectId") {
                 return res.status(404).send({
-                    message: "hngI9 details not found with id " + req.params.hngId,
+                    message: "hngI9 details not found with id " + req.params.Id,
                
                 });
             }
             return res.status(500).send({
-                message: "Error retrieving hngI9 details with id " + req.params.hngId,
+                message: "Error retrieving hngI9 details with id " + req.params.Id,
                
             });
         });
@@ -63,7 +63,7 @@ exports.findOne = (req, res) => {
 
 //update hngi9 user details
 exports.hngUpdate = (req, res) => {
-    Hng9.findByIdAndUpdate(req.params.hngId, {
+    Hng9.findByIdAndUpdate(req.params.Id, {
         slackUsername: req.body.slackUsername ,
         backend: req.body.backend,
         age: req.body.age,
@@ -72,7 +72,7 @@ exports.hngUpdate = (req, res) => {
         .then((data) => {
             if (!data) {
                 return res.status(404).send({
-                    message: "Hngi9 details not found with id " + req.params.hngId,
+                    message: "Hngi9 details not found with id " + req.params.Id,
                 });
         
             } res.send(data);
@@ -80,12 +80,12 @@ exports.hngUpdate = (req, res) => {
         .catch((err) => {
             if (err.kind === "ObjectId") {
                 return res.status(404).send({
-                    message: "Hngi9 details not found with id " + req.params.hngId,
+                    message: "Hngi9 details not found with id " + req.params.Id,
                
                 });
             }
             return res.status(500).send({
-                message: "Error updating Flight details with id " + req.params.flightId,
+                message: "Error updating user details with id " + req.params.Id,
                
             });
         });
