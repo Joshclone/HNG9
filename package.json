@@ -11,6 +11,10 @@
     "node-modules": "^1.0.1",
     "nodemon": "^2.0.16"
   },
+  
+  "engines": { 
+    "node": "14.20.1"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
