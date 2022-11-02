@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 9000;
 app.use(express.json());
 app.use(cors())
-app.get("/",(req,res)=>{
+app.get("/hng",(req,res)=>{
     res.status(200).json({
         
 
