@@ -14,8 +14,8 @@ app.get("/",(req,res)=>{
 
             slackUsername: "Nwaeze Joshua",
             backend: true,
-            age: 
-            bio: "Hi my name is Nwaeze Joshua, I am a backend developer, proficienct in  ExpressNodeJs, l want to learn more and become a skilled software developer providing scalable solutions to applications"
+            age: "26",
+            bio: "Hi my name is Nwaeze Joshua, I am a backend developer, proficienct in  ExpressNodeJs, l want to learn more and become a skilled software developer providing scalable solutions to applications",
       
     })
 })
